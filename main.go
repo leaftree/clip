@@ -28,7 +28,7 @@ func init() {
 }
 
 func main() {
-	var host = ":4321"
+	host := GetAddr()
 
 	s := NewServe(host)
 	s.Register("/u/{file}", s.handler, http.MethodGet)
